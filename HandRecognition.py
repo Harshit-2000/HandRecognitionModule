@@ -21,7 +21,7 @@ while True:
             for id, lm in enumerate(handlms.landmark):
                 # print(id,lm)
                 h, w, c = img.shape
-                cx, cy = int(h*lm.x), int(w*lm.y)
+                cx, cy = int(w*lm.x), int(h*lm.y)
                 print(id, cx, cy)
 
             mpDraw.draw_landmarks(img, handlms, mpHands.HAND_CONNECTIONS)
